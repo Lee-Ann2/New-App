@@ -16,14 +16,18 @@
         </div>
     </header>
     <div class="container-box">
-        <form action="">
+        <form action="/submit-form" method="post" id="form">
             <div class="names">
                 <h3>Name:</h3>
-                <input type="text" required>
+                <input type="text" id="name">
+                <span class="error"></span>
+                <span class="success"></span>
             </div>
             <div class="names">
                 <h3>Last name:</h3>
-                <input type="text">
+                <input type="text" id="lastname">
+                <span class="error"></span>
+                <span class="success"></span>
             </div>
             <div class="personal-info">
                 <div class="title">
@@ -34,41 +38,54 @@
                     <label for="mr">Mr</label>
                     <input type="radio" id="mrs">
                     <label for="mrs">Mrs</label>
+                    <input type="radio" id="other">
                     <label for="other">Other</label>
+                    <span class="error"></span>
+                    <span class="success"></span>
                 </div>
                 <div class="date">
                     <label for="birth">Date of birth:</label>
                     <input type="date" id="birth">
+                    <span class="error"></span>
+                    <span class="success"></span>
                 </div>
             </div>
             <div class="auth">
                 <div class="info">
-                    <input type="email" placeholder="Email" required id="emails">
+                    <input type="email" placeholder="Email" id="emails">
                     <label for="emails">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M20.5 5.5L12 13L3.5 5.5M4 19H20C20.5523 19 21 18.5523 21 18V6C21 5.44772 20.5523 5 20 5H4C3.44772 5 3 5.44772 3 6V18C3 18.5523 3.44772 19 4 19Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                     </label>
+                    <span class="error"></span>
+                    <span class="success"></span>
                 </div>
                 <div class="info">
-                    <input type="password" placeholder="password" required id="passwords">
+                    <input type="password" placeholder="password" id="passwords">
                     <label for="passwords">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7 11.0001V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11.0001M5 22.0001H19C20.1046 22.0001 21 21.1046 21 20.0001V13.0001C21 11.8955 20.1046 11.0001 19 11.0001H5C3.89543 11.0001 3 11.8955 3 13.0001V20.0001C3 21.1046 3.89543 22.0001 5 22.0001Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                     </label>
+                    <span class="error"></span>
+                    <span class="success"></span>
                 </div>
                 <div class="info">
-                    <input type="password" placeholder="Confirm password" required id="auth-password">
+                    <input type="password" placeholder="Confirm password" id="auth-password">
                     <label for="auth-password">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7 11.0001V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11.0001M5 22.0001H19C20.1046 22.0001 21 21.1046 21 20.0001V13.0001C21 11.8955 20.1046 11.0001 19 11.0001H5C3.89543 11.0001 3 11.8955 3 13.0001V20.0001C3 21.1046 3.89543 22.0001 5 22.0001Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                     </label>
+                    <span class="error"></span>
+                    <span class="success"></span>
                 </div>
             </div>
-            <button>Submit</button>
+            <button id="submitbtn">Submit</button>
         </form>
     </div>
 </body>
+
+<script src="signup.js" defer></script>
 </html>

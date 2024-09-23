@@ -1,1 +1,8 @@
-/* 
+
+.setError{
+    color: red;
+}
+.names .success input {
+color: green;
+}
+.auth .success input
