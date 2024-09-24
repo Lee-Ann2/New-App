@@ -1,3 +1,25 @@
+// TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyACxe63S-rVKYZPUYmyCnCQHvXHDdXgNQQ",
+    authDomain: "new-app-3a1d2.firebaseapp.com",
+    projectId: "new-app-3a1d2",
+    storageBucket: "new-app-3a1d2.appspot.com",
+    messagingSenderId: "222068722243",
+    appId: "1:222068722243:web:cef9704c872710aa7f62f6",
+    measurementId: "G-3ZFP5PYTBE"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  const database = firebase.database();
+
+
+
 const form = document.getElementById('form');
 const name = document.getElementById('name');
 const lastname = document.getElementById('lastname');
@@ -16,6 +38,34 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   validateInputs();
 });
+
+auth.createWithUserEmailAndPassword(emails, passwords)
+.then(function() {
+  const user = auth.user
+//add user to firebase database
+const database_ref = database_ref()
+
+//add user data 
+
+const data_ref = {
+ name : name,
+ lastname : lastname,
+ emails : emails,
+ passwords : passwords,
+ authPassword : authPassword,
+ last_login : Date.now()  //last time the user loged in
+}
+
+data_ref.child()
+
+})
+
+.catch(function(error) {
+  const error = error.code
+  const message = error.message
+  alert(message)
+});
+
 
 const setError = (element, message) => {
   const names = element.parentElement;
@@ -90,7 +140,16 @@ const setSuccess = (element) => {
       }
     };
 
+function popUp() {
+  const popup = document.getElementById('popup');
 
+  popup.classList.add('open-popup');
+}
 
-    
+const ok = document.getElementById('ok-btn');
+
+document.getElementById('ok-btn').addEventListener('click', () => {
+  window.open('signin.html', '_blank');
+});
+
         
