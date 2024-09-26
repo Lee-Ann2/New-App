@@ -56,7 +56,7 @@ const data_ref = {
  last_login : Date.now()  //last time the user loged in
 }
 
-data_ref.child()
+data_ref.child('users/' + user.uid).set(user_data)
 
 })
 
