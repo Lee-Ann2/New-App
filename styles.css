@@ -1,8 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    border: none;
+}
+body {
+    background-color: #FEFAF6;
+}
 
-.setError{
-    color: red;
-}
-.names .success input {
-color: green;
-}
-https://new-app-3a1d2.firebaseapp.com/__/auth/handler

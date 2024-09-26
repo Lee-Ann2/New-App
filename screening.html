@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://api.fontshare.com/v2/css?f[]=pencerio@50&f[]=chillax@400,600&f[]=melodrama@400&f[]=gambetta@400&f[]=trench-slab@500&f[]=supreme@400&f[]=bespoke-stencil@700&f[]=bespoke-serif@400&f[]=tanker@400&f[]=hind@400&f[]=khand@700&f[]=pilcrow-rounded@600&f[]=ranade@300&f[]=excon@500&f[]=nunito@400&f[]=bebas-neue@400&f[]=neco@400&f[]=pally@500&f[]=synonym@400&f[]=switzer@400,700&f[]=bespoke-slab@400&f[]=poppins@600&f[]=quicksand@500&f[]=general-sans@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="pexels-karolina-grabowska-4197491.jpg" type="image/x-icon">
+    <title>Watchit</title>
+</head>
+<body>
+    <header>
+        <div class="logos">
+            <h1><img src="pexels-karolina-grabowska-4197491.jpg" alt="" style="width: 5vh;">Watchit</h1>
+        </div>
+        <div class="search">
+            <input type="text" id="search" placeholder="Enter name">
+            <button id="search">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 17L22 22M19.5 10.75C19.5 15.5825 15.5825 19.5 10.75 19.5C5.91751 19.5 2 15.5825 2 10.75C2 5.91751 5.91751 2 10.75 2C15.5825 2 19.5 5.91751 19.5 10.75Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="header-icon1">
+            <button id="fav"> 
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 14.0004C26.7886 6.24298 15.5 -1.99928 12.0001 6.99979C8.50006 -1.99928 -2.65695 6.24302 4.13155 14.0004C7.63156 18 10.5001 19.5001 12.0001 20.9995C13.5 19.5001 16.5 17.9999 20 14.0004Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="header-icon2">
+            <button id="donloads">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3V17M12 17L6 11M12 17L18 11M3 21H21" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="header-icon3">
+            <button id="notification">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 20.8889C11.5344 21.4827 12.4656 21.4827 13 20.8889M5.6 8.4V9.45798C5.6 11.7583 4.93512 14.0096 3.68539 15.9408L3 17H21L20.3146 15.9409C19.0649 14.0096 18.4 11.7583 18.4 9.45798V8.4C18.4 4.86537 15.5346 2 12 2C8.46538 2 5.6 4.86538 5.6 8.4Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+    <main>
+        <span id="back">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 12H3M3 12L10 5M3 12L10 19" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </span>
+        <div class="bx-container">
+            <div class="cinema">
+                <div class="trailer" id="trailer"></div>
+                <div class="movie" id="movie"></div>
+                <div class="recom" id="recom"></div>
+                <div class="reviews" id="reviews"></div>
+            </div>
+            <div class="cast" id="cast"></div>
+        </div>
+    </main>
+    <script src="screening.js" defer></script>
+</body>
+</html>
