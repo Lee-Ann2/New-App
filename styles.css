@@ -3,8 +3,105 @@
     padding: 0;
     box-sizing: 0;
     border: none;
+    list-style: none;
 }
 body {
     background-color: #FEFAF6;
 }
-
+.navbar{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.nav-div {
+    align-items: center;
+    justify-content: space-between;
+}
+.logo, h1 {
+    font-size: 2em;
+    font-family: 'Hind', sans-serif;
+    font-weight: 600;
+    color: #DAC0A3;
+    filter: drop-shadow(-3px 2px 3px #EADBC8);
+    flex: 2;
+}
+span{
+    font-family: 'pencerio', sans-serif;
+    font-size: 2.5rem;
+}
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+main {
+    background-color: #EADBC8;
+    margin: 50px;
+    padding: 30px;
+    border-radius: 20px;
+}
+.container-box {
+    background-image: url(./images/arcane2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1090px;
+    height: 400px;
+    margin: 30px;
+    padding: 20px;
+    font-size: 3em;
+    font-family: 'Supreme', sans-serif;
+    color: #102c57;
+    border-radius: 20px;
+}
+#reg {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-family: 'Supreme', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #DAC0A3;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px 1px #cdb293;
+}
+#reg:hover {
+    background-color: #EADBC8;
+    margin-top: -20px;
+}
+.best-in-cinema, .bestTv {
+    background-color: #DAC0A3;
+    margin: 10px;
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.bestMovies, .bestSeries {
+    background-color: #EADBC8;
+    margin: 20px;
+    padding: 30px;
+    border: 2px solid #cdb293;
+    box-shadow: 2px 2px 6px 1px #c59e70;
+}
+.movie-sec1 {
+    display: grid;
+    grid-template-columns: 400px 700px;
+}
+.movie-sec2 {
+    display: grid;
+    grid-template-columns: 300px 500px 300px; 
+}
+.bestTv {
+    margin-top: 150px;
+    padding: 20px;
+}
+.show1 {
+    flex: 2;
+    display: grid;
+    grid-template-columns: 300px 400px;
+    grid-template-rows: 1fr;
+}
+.show2 {
+    flex: 1;
+}
