@@ -3,7 +3,7 @@
 
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
+  /*const firebaseConfig = {
     apiKey: "AIzaSyACxe63S-rVKYZPUYmyCnCQHvXHDdXgNQQ",
     authDomain: "new-app-3a1d2.firebaseapp.com",
     projectId: "new-app-3a1d2",
@@ -17,7 +17,7 @@
   const app = initializeApp(firebaseConfig);
   const auth = firebase.auth();
   const database = firebase.database();
-
+*/
 
 
 const form = document.getElementById('form');
@@ -26,9 +26,8 @@ const lastname = document.getElementById('lastname');
 const emails = document.getElementById('emails');
 const passwords = document.getElementById('passwords');
 const authPassword = document.getElementById('auth-password');
-const miss = document.getElementById('miss');
-const mr = document.getElementById('mr');
-const mrs = document.getElementById('mrs');
+const miss = document.getElementById('female');
+const mr = document.getElementById('male');
 const other = document.getElementById('other');
 const birth = document.getElementById('birth');
 const submit = document.getElementById('submitbtn');
@@ -39,7 +38,7 @@ form.addEventListener('submit', (e) => {
   validateInputs();
 });
 
-auth.createWithUserEmailAndPassword(emails, passwords)
+/*auth.createWithUserEmailAndPassword(emails, passwords)
 .then(function() {
   const user = auth.user
 //add user to firebase database
@@ -65,7 +64,7 @@ data_ref.child('users/' + user.uid).set(user_data)
   const message = error.message
   alert(message)
 });
-
+*/
 
 const setError = (element, message) => {
   const names = element.parentElement;
@@ -127,10 +126,10 @@ const setSuccess = (element) => {
         setSuccess(authPassword);
       }
     
-      if (miss.checked === false && mr.checked === false && mrs.checked === false && other.checked === false) {
-        setError(miss, 'Title is required');
+      if (female.checked === false && male.checked === false && other.checked === false) {
+        setError(female, 'Title is required');
       } else {
-        setSuccess(miss);
+        setSuccess(female);
       }
     
       if (birth.value === '') {
@@ -140,16 +139,3 @@ const setSuccess = (element) => {
       }
     };
 
-function popUp() {
-  const popup = document.getElementById('popup');
-
-  popup.classList.add('open-popup');
-}
-
-const ok = document.getElementById('ok-btn');
-
-document.getElementById('ok-btn').addEventListener('click', () => {
-  window.open('signin.html', '_blank');
-});
-
-        

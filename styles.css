@@ -137,9 +137,9 @@ main {
 .show2 {
     flex: 1;
 }
-/* Style for the signin page*/
+/* Style for the signin page and sign up page.*/
 
-.container {
+.container, .container-bx {
     text-align: center;
     margin: auto;
     padding: 30px;
@@ -160,7 +160,7 @@ main {
 .input-sec, .forgot, #inputs {
     margin-top: 20px;
 }
-#email, #password {
+#email, #password, #name, #lastname, #emails, #passwords, #auth-password {
     padding: 10px;
     border-radius: 10px;
     width: 250px;
@@ -183,4 +183,60 @@ main {
     font-size: 1.2em;
     font-family: 'Supreme', sans-serif;
     color: #102c57;
+}
+.container-bx {
+    width: 600px;
+    margin-top: 80px;
+    background-color: #FEFAF6;
+    border-radius: 10px;
+}
+.person, .personal-info {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.personal-info{
+    margin: 20px;
+    gap: 200px;
+    color: #102c57;
+    font-family: 'Supreme', sans-serif;
+}
+.name1, .name2 {
+    margin-top: 20px;
+    margin-left: -210px;
+    font-size: 1.5em;
+    font-family: 'Supreme', sans-serif;
+    color: #102c57;
+}
+.name2 {
+    margin-left: -150px;
+}
+#name, #lastname, #emails, #passwords, #auth-password{
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #c5c3c3;
+}
+.info {
+    margin-left: -340px;
+}
+#icon3, #icon4, #icon5 {
+    margin-left: -50px;
+}
+#submitbtn {
+    margin-top: 40px;
+    padding: 20px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: #DAC0A3;
+    color: #FEFAF6;
+    font-size: 1.2em;
+    font-family: 'Hind', sans-serif;
+    border: 1px solid #cdb293;
+    box-shadow: 2px 2px 4px 1px #c59e70;
+    cursor: pointer;
+}
+#submitbtn:hover {
+    margin: 5px;
+    background-color: #cdb293;
+    border: 2px solid #DAC0A3;
 }
