@@ -28,11 +28,6 @@ span{
     font-family: 'pencerio', sans-serif;
     font-size: 2.5rem;
 }
-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-}
 main {
     background-color: #EADBC8;
     margin: 50px;
@@ -51,6 +46,27 @@ main {
     font-family: 'Supreme', sans-serif;
     color: #102c57;
     border-radius: 20px;
+}
+.binge {
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Trench', sans-serif;
+    color: #102c57;
+}
+.paragraph {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-family: 'Supreme', sans-serif;
+    color: #102c57;
+}
+.perks-list {
+    margin: 20px;
+    padding: 20px;
+    font-size: 0.9rem;
+    font-family: 'Pilcrow', sans-serif;
+    color: #102c57;
+    font-weight: 300;
 }
 #reg {
     margin: 20px;
@@ -83,6 +99,17 @@ main {
     padding: 30px;
     border: 2px solid #cdb293;
     box-shadow: 2px 2px 6px 1px #c59e70;
+    cursor: pointer;
+}
+.bestMovies:hover {
+    margin: -5px;
+    border-radius: 20px;
+    font-size: 2em;
+}
+.bestSeries:hover {
+    margin: -5px;
+    border-radius: 20px;
+    font-size: 2em;
 }
 .movie-sec1 {
     display: grid;
