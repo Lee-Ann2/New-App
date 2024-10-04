@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    border: none;
+    list-style: none;
+}
+.header {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #102c57;
+}
+#account {
+    width: 180px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 1em;
+    font-family: 'Hind', sans-serif;
+    background-color: #DAC0A3;
+    color: #102c57;
+    cursor: pointer;
+}
+#icon1 {
+   margin-left: -30px;
+   margin-top: 20px;
+   text-align: center;
+}
+.addacc {
+    padding: 10px;
+    position: absolute;
+    width: 160px;
+    border-radius: 5px;
+    background-color: #EADBC8;
+    font-family: 'Hind', sans-serif;
+    gap: 10px;
+    color: #102c57;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+#addacc {
+    visibility: hidden;
+}
+.search {
+    display: flex;
+    align-items: center;
+}
+#search {
+    width: 180px;
+    padding: 10px;
+    border: 1px solid #102c57;
+    border-radius: 2em;
+    outline: 1px solid #102c57;
+}
+#searchicon {
+    margin-left: -30px;
+}
+.header-icon:hover {
+    cursor: pointer;
+}
+.sides {
+    padding: 20px;
+    width: 210px;
+    border-right: 1px solid #102c57;
+}
+.side, .settings {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+.side:hover {
+    background-color: #DAC0A3;
+    width: 220px;
+    border-radius: 15px;
+}
+#settings:hover {
+    background-color: #DAC0A3;
+    width: 220px;
+    border-radius: 15px;
+}
+.name-icon {
+    font-size: 1.8rem;
+    font-family: 'hind', sans-serif;
+    cursor: pointer;
+    color: #102c57;
+}
+.more-set {
+    margin: 20px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    align-items: left;
+    visibility: hidden;
+}
+.catergory {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-family: 'Supreme', sans-serif;
+    color: #102c57;
+    border-bottom: 1px solid #102c57;
+}
+#catergories {
+    padding: 20px;
+    font-size: 0.9em;
+    font-family: 'Supreme', sans-serif;
+    color: #4c6387;
+    cursor: pointer;
+}
+li {
+    margin-top: 10px;
+}
+swiper-container {
+    width: 1000px;
+    height: 500px;
+    margin-left: 300px;
+    margin-top: -180px;
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
