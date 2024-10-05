@@ -114,15 +114,20 @@
             <div id="catergory">
                 <h2 class="catergory">Catergories</h2>
                 <div id="catergories"></div>
+                <div class="scrollbar-horizontal"></div>
             </div>
         </div>
-        <swiper-container class="mySwiper" navigation="true">
-            <div class="swiper-wrapper" id="swiper-wrapper">
-              <!-- Slides will be appended here -->
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </swiper-container>
+        <div class="scroller">
+            <ul class="tag-list scroller__inner">
+                <li>NETFLIX</li>
+                <li>PARAMOUNT</li>
+                <li>HULU</li>
+                <li>DISNEY</li>
+                <li>webdev</li>
+                <li>animation</li>
+                <li>UX/UI</li>
+            </ul>
+        </div>
         <div class="bx-container">
             <div class="cinema">
                 <div class="trailer" id="trailer"></div>
@@ -133,7 +138,6 @@
             <div class="cast" id="cast"></div>
         </div>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     
     <script src="script.js" defer></script>
 </body>

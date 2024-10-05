@@ -60,14 +60,14 @@ function displayCatergory(all_keywords) {
     catergories.appendChild(catergory);
   });
 }
-
+/*
 fetch('https://imdb188.p.rapidapi.com/api/v1/getFanFavorites?country=US', options)
   .then(response => response.json())
   .then(response => {
     const swiperWrapper = document.getElementById('swiper-wrapper');
-    const primaryImages = response.data.list.map(list => list.primaryImage);
-    const titles = response.data.list.map(list => list.titleText);
-    const summaries = response.data.list.map(list => list.ratingSummary);
+    const primaryImages = response.data.list.map(item => item.primaryImage);
+    const titles = response.data.list.map(item => item.titleText);
+    const summaries = response.data.list.map(item => item.ratingSummary);
 
     for (let i = 0; i < Math.min(20, primaryImages.length); i++) {
       const slide = document.createElement('div');
@@ -91,7 +91,26 @@ fetch('https://imdb188.p.rapidapi.com/api/v1/getFanFavorites?country=US', option
   })
   .catch(error => console.error(error));
 
+*/
 
+fetch('https://imdb188.p.rapidapi.com/api/v1/getWhatsStreaming?country=US', options)
+  .then(response => response.json())
+  .then(response => {
+    const allArrays = Object.values(response.data);
+    console.log(allArrays);
+  })
+  .catch(error => console.error(error));
+
+const scrollers = document.querySelectorAll('.scroller');
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addAnimation();
+}
+
+function addAnimation() {
+   scrollers.forEach((scroller) => {
+    scroller.setAttribute('data-animated', true)
+   });
+}
 
 const search = document.getElementById('search');
 const searchIcon = document.getElementById('searchicon');
@@ -112,23 +131,5 @@ settings.addEventListener('click', () => {
   }
 });
 
-buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    const offset = button.dataset.carouselButton === 'next' ? 1 : -1;
-    const slides = button.closest('[data-carousel]').querySelector('[data-slides]');
-    const activeSlide = slides.querySelector('[data-active]');
-    
-    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-    
-    if (newIndex < 0) {
-      newIndex = slides.children.length - 1;
-    } else if (newIndex >= slides.children.length) {
-      newIndex = 0;
-    }
-    
-    slides.children[newIndex].setAttribute('data-active', true);
-    activeSlide.removeAttribute('data-active');
-  });
-});
 
 
