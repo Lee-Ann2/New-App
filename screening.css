@@ -132,7 +132,7 @@ li {
 }
 .tag-list {
     text-align: center;
-    margin-top: -180px;
+    margin-top: -200px;
 }
 .tag-list li {
     width: fit-content;
@@ -140,15 +140,36 @@ li {
     background: #DAC0A3;
     border-radius: 0.5rem;
     box-shadow: 0 0.5rem 1rem -0.25rem #DAC0A3;
+    cursor: pointer;
+    font-family: 'Hind', sans-serif;
+    color: #102c57;
 }
 .scroller {
     margin-left: 300px;
-    max-width: 600px;
-    outline: 3px solid lime;
 }
 .scroller__inner {
     display: flex;
     padding-block: 1rem;
     gap: 1rem;
+}
+.titleMovie {
+    margin-top: 50px;
+    margin-left: 300px;
+    font-size: 2rem;
+    font-family: 'Supreme', sans-serif;
+    color: #102c57;
+}
+.top-movies {
+    background-color: pink;
+    width: 1000px;
+    height: 400px;
+    margin-top: 20px;
+    margin-left: 300px;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+}
+.movie-cards {
+    margin: 20px;
+
 }

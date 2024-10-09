@@ -94,23 +94,55 @@ fetch('https://imdb188.p.rapidapi.com/api/v1/getFanFavorites?country=US', option
 */
 
 fetch('https://imdb188.p.rapidapi.com/api/v1/getWhatsStreaming?country=US', options)
-  .then(response => response.json())
-  .then(response => {
-    const allArrays = Object.values(response.data);
-    console.log(allArrays);
-  })
-  .catch(error => console.error(error));
+    .then(response => response.json())
+    .then(response => {
+      const data = response.data;
+      window.streamingData = data;
+      initializeStreamingList(data);
+    })
+    .then(response => {
+      const edge = response.edges[0];
+      for(i = 1; i < 10; i ++) {
+        console.log(edge[i])
+      }
+    })
+    .catch(error => console.error(error));
 
-const scrollers = document.querySelectorAll('.scroller');
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  addAnimation();
-}
-
-function addAnimation() {
-   scrollers.forEach((scroller) => {
-    scroller.setAttribute('data-animated', true)
-   });
-}
+  function initializeStreamingList(data) {
+    const streamingList = document.getElementById('streaming-list');
+    streamingList.innerHTML = '';
+    
+    data.forEach((obj) => {
+      const li = document.createElement('li');
+      li.textContent = obj.providerName;
+      streamingList.appendChild(li);
+    });
+    
+    streamingList.addEventListener('click', (e) => {
+      if (e.target.tagName === 'LI') {
+        const providerName = e.target.textContent;
+        displayProviderData(providerName);
+      }
+    });
+  }
+  function displayProviderData(providerName) {
+    const dataObject = window.streamingData.find((obj) => obj.providerName === providerName);
+    dataObject.edges.forEach((edge) => {
+      console.log(edge); // Log each edge object
+  
+      // Access specific properties (e.g., title)
+      console.log(edge.title);
+    })
+    // Create a new window
+    const newWindow = window.open('Watchit', '_blank');
+    
+    // Write the HTML content to the new window
+    newWindow.document.write(htmlContent);
+  }
+  
+  
+  
+  
 
 const search = document.getElementById('search');
 const searchIcon = document.getElementById('searchicon');
