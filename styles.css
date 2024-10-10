@@ -73,6 +73,16 @@ main {
     color: #102c57;
     font-weight: 300;
 }
+.perk-name {
+    margin: 20px;
+    font-size: 1.8rem;
+    font-family: 'Hind', sans-serif;
+}
+.list li {
+    list-style: circle;
+    font-family: 'Supreme', sans-serif;
+    font-size: 1.2rem;
+}
 #reg {
     margin: 20px;
     padding: 10px 20px;
@@ -88,6 +98,12 @@ main {
 #reg:hover {
     background-color: #EADBC8;
     margin-top: -20px;
+}
+.words, .words2 {
+    margin: 20px;
+    font-size: 4rem;
+    font-family: 'Tanker', sans-serif;
+    color: #102c57;
 }
 .best-in-cinema, .bestTv {
     background-color: #DAC0A3;
@@ -105,6 +121,13 @@ main {
     border: 2px solid #cdb293;
     box-shadow: 2px 2px 6px 1px #c59e70;
     cursor: pointer;
+}
+#series {
+    height: 510px;
+}
+#series2 img {
+    width: 300px;
+    height: 400px;
 }
 .bestMovies:hover {
     margin: -5px;
@@ -125,8 +148,15 @@ main {
     grid-template-columns: 300px 500px 300px; 
 }
 .bestTv {
-    margin-top: 150px;
+    margin-top: 10px;
     padding: 20px;
+}
+.titles {
+    font-size: 2rem;
+    font-family: 'Supreme', sans-serif;
+    font-weight: 300;
+    color: #FEFAF6;
+    display: none;
 }
 .show1 {
     flex: 2;
@@ -239,4 +269,9 @@ main {
     margin: 5px;
     background-color: #cdb293;
     border: 2px solid #DAC0A3;
+}
+footer {
+    padding: 20px;
+    background-color: #102c57;
+    text-align: center;
 }
