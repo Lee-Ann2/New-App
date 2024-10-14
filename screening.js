@@ -1,4 +1,3 @@
-
 const urls = {
     link1: 'https://imdb188.p.rapidapi.com/api/v1/getKeywords',
     link2: 'https://imdb188.p.rapidapi.com/api/v1/getFanFavorites?country=US',
