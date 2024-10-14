@@ -18,7 +18,7 @@ const urls = {
 const options = {
 	method: 'GET',
 	headers: {
-		'x-rapidapi-key': '6a0c795ee6mshb589b0201c4f40cp161c4bjsn9e1ea5c78142',
+		'x-rapidapi-key': [My-api-key],
 		'x-rapidapi-host': 'imdb188.p.rapidapi.com'
 	}
 };
@@ -45,7 +45,6 @@ main()
 fetch('https://imdb188.p.rapidapi.com/api/v1/getKeywords', options)
   .then(response => response.json())
   .then(response => {
-    console.log(response.data.all_keywords);
     displayCatergory(response.data.all_keywords); // Pass the data to the function
   })
   .catch(error => console.error(error));
