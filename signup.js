@@ -117,7 +117,7 @@ const setSuccess = (element) => {
       }
 
       submit.addEventListener('click', () => {
-        window.open('signin.html', '_self');
+        window.open('home.html', '_self');
       });
 
 };
