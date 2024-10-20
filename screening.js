@@ -18,7 +18,7 @@ const urls = {
 const options = {
 	method: 'GET',
 	headers: {
-		'x-rapidapi-key': [My-api-key],
+		'x-rapidapi-key': '6a0c795ee6mshb589b0201c4f40cp161c4bjsn9e1ea5c78142',
 		'x-rapidapi-host': 'imdb188.p.rapidapi.com'
 	}
 };
@@ -144,22 +144,10 @@ fetch('https://imdb188.p.rapidapi.com/api/v1/getWhatsStreaming?country=US', opti
 
 const search = document.getElementById('search');
 const searchIcon = document.getElementById('searchicon');
-const accountbtn = document.getElementById('account');
-const addacc = document.getElementById('addacc');
-const settings = document.getElementById('settings');
-const moreSet = document.getElementsByClassName('more-set');
+
 const catergories = document.querySelector('#catergories');
 const buttons = document.querySelectorAll('[data-carousel-button]')
 
-accountbtn.addEventListener('click', () => {
-  addacc.style.visibility = addacc.style.visibility === 'visible' ? 'hidden' : 'visible';
-});
-
-settings.addEventListener('click', () => {
-  for (let i = 0; i < moreSet.length; i++) {
-    moreSet[i].style.visibility = moreSet[i].style.visibility === 'visible' ? 'hidden' : 'visible';
-  }
-});
 
 
 

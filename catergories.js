@@ -109,7 +109,7 @@ const url = 'https://imdb188.p.rapidapi.com/api/v1/getWeekTop10';
 const options = {
 	method: 'GET',
 	headers: {
-		'x-rapidapi-key': [My-api-key],
+		'x-rapidapi-key': '6a0c795ee6mshb589b0201c4f40cp161c4bjsn9e1ea5c78142',
 		'x-rapidapi-host': 'imdb188.p.rapidapi.com'
 	}
 };
@@ -131,36 +131,37 @@ fetch('https://imdb188.p.rapidapi.com/api/v1/getWeekTop10', options)
     initializeWatchingList(data);
   })
   .then(response => {
-    const list = response.list[0];
+    const list = response;
     for(i = 1; i < 9; i ++) {
       console.log(list[i])
     }
   })
   .then(response => {
+    const tiles = response.data.list.map(item => item.title);
     const top10Movies = [];
     for (const key in response.data.list) {
       top10Movies.push({
-        title: response.data.list[key].originalTitleText,
-        image: response.data.list[key].primaryImage.imageURL,
-        year: response.data.list[key].releaseYear
+        title: response.data.list.title.originalTitleText,
+        image: response.data.list.title.primaryImage.imageURL,
+        year: response.data.list.title.releaseYear
       });
     }
 
-    top10Movies.forEach((movie, index) => {
+    top10Movies.forEach((title, index) => {
       const slideHtml = `
         <div class="slides">
-          <h2>${movie.title}</h2>
-          <img src="${movie.image}" />
-          <p>${movie.year}</p>
+          <h2>${title.title}</h2>
+          <img src="${title.image}" />
+          <p>${title.year}</p>
         </div>
       `;
       slider.insertAdjacentHTML('beforeend', slideHtml);
 
       const slideHtml2 = `
         <div class="slides2">
-          <h2>${movie.title}</h2>
-          <img src="${movie.image}" />
-          <p>${movie.year}</p>
+          <h2>${title.title}</h2>
+          <img src="${title.image}" />
+          <p>${title.year}</p>
         </div>
       `;
       slider2.insertAdjacentHTML('beforeend', slideHtml2);
@@ -199,7 +200,7 @@ fetch('https://imdb188.p.rapidapi.com/api/v1/getWeekTop10', options)
 
 next.addEventListener('click', function() {
   let slides = document.querySelectorAll('.slides');
-  slider.appendChild(slides[0]);
+  slider.appendChild(slides[1]);
 });
 
 prev.addEventListener('click', function() {

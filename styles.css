@@ -16,12 +16,20 @@ img {
 .navbar{
     padding-right: 15px;
     padding-left: 15px;
+    display: flex;
+    flex-direction: row;
 }
-.nav-div {
+.nav-div ul {
+    margin: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    gap: 20px;
+    font-family: 'Hind', sans-serif;
 }
 .logo, h1 {
+    margin: 20px;
     font-size: 2em;
     font-family: 'Hind', sans-serif;
     font-weight: 600;
@@ -173,11 +181,11 @@ main {
     text-align: center;
     margin: auto;
     padding: 30px;
-    width: 400px;
+    width: 350px;
     height: 100%;
     background-color: #DAC0A3;
     border: 2px solid #cdb293;
-    border-radius: 30px;
+    border-radius: .5rem;
     box-shadow: 2px 2px 4px 2px #c59e70;
 }
 .login {
@@ -207,6 +215,17 @@ main {
     font-family: 'Supreme', sans-serif;
     font-weight: 400;
     color: #102c57;
+}
+#signin {
+    margin: 20px;
+    padding: 10px 40px;
+    background: #102c57;
+    font-family: 'Hind', sans-serif;
+    font-size: 1.2rem;
+    color: #c5c3c3;
+    border-radius: 0.3rem;
+    box-shadow: 2px 2px 5px 2px #c5c3c3;
+    cursor: pointer;
 }
 .acc {
     margin-top: 20px;

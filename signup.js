@@ -1,25 +1,3 @@
-// TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  /*const firebaseConfig = {
-    apiKey: "AIzaSyACxe63S-rVKYZPUYmyCnCQHvXHDdXgNQQ",
-    authDomain: "new-app-3a1d2.firebaseapp.com",
-    projectId: "new-app-3a1d2",
-    storageBucket: "new-app-3a1d2.appspot.com",
-    messagingSenderId: "222068722243",
-    appId: "1:222068722243:web:cef9704c872710aa7f62f6",
-    measurementId: "G-3ZFP5PYTBE"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const auth = firebase.auth();
-  const database = firebase.database();
-*/
-
-
 const form = document.getElementById('form');
 const name = document.getElementById('name');
 const lastname = document.getElementById('lastname');
@@ -137,5 +115,14 @@ const setSuccess = (element) => {
       } else {
         setSuccess(birth);
       }
+
+      submit.addEventListener('click', () => {
+        window.open('signin.html', '_self');
+      });
+
 };
+
+
+// sign part
+
 

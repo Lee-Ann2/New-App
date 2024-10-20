@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://api.fontshare.com/v2/css?f[]=pencerio@50&f[]=chillax@400,600&f[]=melodrama@400&f[]=gambetta@400&f[]=trench-slab@500&f[]=supreme@400&f[]=bespoke-stencil@700&f[]=bespoke-serif@400&f[]=tanker@400&f[]=hind@400&f[]=khand@700&f[]=pilcrow-rounded@600&f[]=ranade@300&f[]=excon@500&f[]=nunito@400&f[]=bebas-neue@400&f[]=neco@400&f[]=pally@500&f[]=synonym@400&f[]=switzer@400,700&f[]=bespoke-slab@400&f[]=poppins@600&f[]=quicksand@500&f[]=general-sans@500&display=swap" rel="stylesheet">
     <link rel="icon" href="hugeicons-collection-svg (2).zip">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="screening.css">
+    <link rel="shortcut icon" href="/images/pexels-karolina-grabowska-4197491.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="home.css">
     <title>Watchit</title>
 </head>
 <body>
@@ -41,7 +41,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="result-box">
+            <div class="result-box" id="search-results">
             </div>
         </div>
         <div class="header-icon">
@@ -70,7 +70,7 @@
     </div>
     <main>
         <div class="sides">
-            <div class="side">
+            <div class="side" active>
                 <div class="iconics" style="margin-left: 5px;">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" color="#102c57" fill="none">
                         <path d="M8.9995 22L8.74887 18.4911C8.61412 16.6046 10.1082 15 11.9995 15C13.8908 15 15.3849 16.6046 15.2501 18.4911L14.9995 22" stroke="currentColor" stroke-width="1.5" />
@@ -151,46 +151,13 @@
         </div>
         <div class="see">
             <li><a href="alllinks.html" class="see-all" id="see-all">See All</a></li>
+            <button id="prev-page"></button>
+            <button id="next-page"></button>
         </div>
         <div class="top-movies">
             <div class="container">
                 <div class="slider">
-                    <div class="slides" style="--img: url(../images/arcane2.jpg)">
-                        <div class="content">
-                            <h2>Slide 1</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="slides" style="--img: url(../images/arcane3.png)">
-                        <div class="content">
-                            <h2>Slide 2</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="slides" style="--img: url(../images/arcane4.jpeg)">
-                        <div class="content">
-                            <h2>Slide 3</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="slides" style="--img: url(../images/arcane5.jpeg)">
-                        <div class="content">
-                            <h2>Slide 4</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="slides" style="--img: url(../images/Dune2.jpg)">
-                        <div class="content">
-                            <h2>Slide 5</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="slides" style="--img: url(../images/jujutsukaisen.jpeg)">
-                        <div class="content">
-                            <h2>Slide 6</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
             <div class="buttons">
@@ -202,41 +169,12 @@
             <h2>Top Series</h2>
         </div>
         <div class="see">
-            <li><a href="#" class="see-all2">See All</a></li>
+            <li><a href="alllinks2.html" class="see-all2">See All</a></li>
         </div>
         <div class="top-series">
             <div class="container2">
                 <div class="slider2">
-                    <div class="slides2" style="--img: url(../images/arcane2.jpg)">
-                        <div class="content2">
-                            <h2>Slide 1</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="slides2" style="--img: url(../images/arcane3.png)">
-                        <div class="content2">
-                            <h2>Slide 2</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="slides2" style="--img: url(../images/arcane4.jpeg)">
-                        <div class="content2">
-                            <h2>Slide 3</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="slides2" style="--img: url(../images/arcane5.jpeg)">
-                        <div class="content2">
-                            <h2>Slide 4</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="slides2" style="--img: url(../images/Dune2.jpg)">
-                        <div class="content2">
-                            <h2>Slide 5</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
+
                     <div class="slides2" style="--img: url(../images/jujutsukaisen.jpeg)">
                         <div class="content2">
                             <h2>Slide 6</h2>
@@ -251,21 +189,11 @@
             </div>
         
         </div>
-        <div class="bx-container">
-            <div class="cinema">
-                <div class="trailer" id="trailer"></div>
-                <div class="movie" id="movie"></div>
-                <div class="recom" id="recom"></div>
-                <div class="reviews" id="reviews"></div>
-                <div class="cast" id="cast"></div>
-            </div>
-            
-        </div>
     </main>
     <footer>
         <p>&copy;Khazi</p>
     </footer>
-    <script src="s" defer></script>
+    <script src="home.js" defer></script>
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement(
@@ -275,6 +203,6 @@
         } 
     </script>    
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-   
+   <script src="screening.js" defer></script>
 </body>
 </html>
